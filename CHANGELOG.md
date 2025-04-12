@@ -1,6 +1,7 @@
 # Change Log
 
 ## [v1.0.0](https://github.com/seaneking/postcss-input-style/tree/v1.0.0) (2017-07-26)
+
 [Full Changelog](https://github.com/seaneking/postcss-input-style/compare/v0.3.0...v1.0.0)
 
 **Merged pull requests:**
@@ -8,6 +9,7 @@
 - Upgrade postcss@6 and dev dependencies [\#3](https://github.com/seaneking/postcss-input-style/pull/3) ([perrin4869](https://github.com/perrin4869))
 
 ## [v0.3.0](https://github.com/seaneking/postcss-input-style/tree/v0.3.0) (2015-09-06)
+
 [Full Changelog](https://github.com/seaneking/postcss-input-style/compare/v0.2.4...v0.3.0)
 
 **Closed issues:**
@@ -15,15 +17,19 @@
 - Move to PostCSS 5.0 [\#1](https://github.com/seaneking/postcss-input-style/issues/1)
 
 ## [v0.2.4](https://github.com/seaneking/postcss-input-style/tree/v0.2.4) (2015-08-18)
+
 [Full Changelog](https://github.com/seaneking/postcss-input-style/compare/v0.2.3...v0.2.4)
 
 ## [v0.2.3](https://github.com/seaneking/postcss-input-style/tree/v0.2.3) (2015-08-17)
+
 [Full Changelog](https://github.com/seaneking/postcss-input-style/compare/v0.2.2...v0.2.3)
 
 ## [v0.2.2](https://github.com/seaneking/postcss-input-style/tree/v0.2.2) (2015-08-17)
+
 [Full Changelog](https://github.com/seaneking/postcss-input-style/compare/v0.2.1...v0.2.2)
 
 ## [v0.2.1](https://github.com/seaneking/postcss-input-style/tree/v0.2.1) (2015-08-15)
+
 [Full Changelog](https://github.com/seaneking/postcss-input-style/compare/v0.2.0...v0.2.1)
 
 ## [v0.2.0](https://github.com/seaneking/postcss-input-style/tree/v0.2.0) (2015-08-15)
