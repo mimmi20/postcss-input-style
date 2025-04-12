@@ -1,5 +1,12 @@
-# Deps
-node_modules
+node_modules/
+npm-debug.log
+yarn-error.log
+*.css
+test/test.js
+.idea/
+.reports/
+junit-report.xml
+/package-lock.json
 
 # Runtime
 *.log
