@@ -74,7 +74,7 @@ Notes on output:
 
 - Selectors are not grouped because if a browser finds a single selector it doesn't understand in a group, the whole group is ignored (see [Selectors Level 3][selectors])
 
-- _-[vendor]-appearance: none;_ is added so your custom styles apply. On Chrome and Safari this means you must style *both* `::track` and `::thumb`, since the appearance must be set on the root element as well
+- `-[vendor]-appearance: none;` is added so your custom styles apply. On Chrome and Safari this means you must style _both_ `::track` and `::thumb`, since the appearance must be set on the root element as well
 
 - The additional `::-moz-focus-outer` rule removes the inconsistent dotted focus outline on firefox.
 
