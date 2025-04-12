@@ -66,7 +66,7 @@ function ruleHandler(rule) {
   // Loop over our selectors
   for (const [select, selector] of Object.entries(SELECTORS)) {
     if (!rule.selector.includes(selector)) {
-      return;
+      continue;
     }
 
     if (Object.prototype.hasOwnProperty.call(PSEUDOS, select)) {

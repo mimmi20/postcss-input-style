@@ -1,32 +1,28 @@
 import postcss from 'postcss';
 import { describe, it, expect } from 'vitest';
 import plugin from '../index.js';
-import * as fs from 'node:fs';
-import * as path from 'node:path';
-
-function test(fixture, opts, done) {
-  let input = fixture + '.css',
-    expected = fixture + '.expected.css';
-
-  input = fs.readFileSync(path.join(__dirname, 'fixtures', input), 'utf8');
-  expected = fs.readFileSync(path.join(__dirname, 'fixtures', expected), 'utf8');
-
-  postcss([plugin(opts)])
-    .process(input)
-    .then((result) => {
-      expect(result.css).to.eql(expected);
-      expect(result.warnings()).to.be.empty;
-      done();
-    })
-    .catch((error) => done(error));
-}
+import { readFileSync } from 'node:fs';
 
 describe('postcss-input-style', () => {
-  it('creates range track selectors', (done) => test('range-track', {}, done));
+  /**
+   *
+   * @param {string} fixture
+   */
+  const test = function (fixture) {
+    const input = readFileSync('./test/fixtures/' + fixture + '.css', 'utf8');
+    const expected = readFileSync('./test/fixtures/' + fixture + '.expected.css', 'utf8');
 
-  it('creates range thumb selectors', (done) => test('range-thumb', {}, done));
+    const result = postcss([plugin()]).process(input);
 
-  it('takes root-level pseudo selectors', (done) => test('root', {}, done));
+    expect(result.css).toBe(expected);
+    expect(result.warnings()).to.be.empty;
+  };
 
-  it('handles grouped mixed selectors', (done) => test('mixed', {}, done));
+  it('creates range track selectors', () => test('range-track'));
+
+  it('creates range thumb selectors', () => test('range-thumb'));
+
+  it('takes root-level pseudo selectors', () => test('root'));
+
+  it('handles grouped mixed selectors', () => test('mixed'));
 });
