@@ -1,11 +1,12 @@
 # PostCSS Input Style
-[![NPM version][npm-badge]][npm-url] [![Downloads][downloads-badge]][npm-url] [![Build Status][travis-badge]][travis-url] 
+
+[![NPM version][npm-badge]][npm-url] [![Downloads][downloads-badge]][npm-url] [![Build Status][travis-badge]][travis-url]
 
 [PostCSS][PostCSS] plugin that adds new pseudo elements to inputs for easy cross-browser styling of their inner elements. Currently the only input supported is Range, more will be added as more vendor-specific pseudo selectors are made available.
 
 _Part of [Rucksack - CSS Superpowers](http://simplaio.github.io/rucksack)_
 
-**Input**
+## Input
 
 ```css
 input[type="range"]::track {
@@ -20,7 +21,7 @@ input[type="range"]::thumb {
 }
 ```
 
-**Output**
+## Output
 
 ```css
 input[type="range"]::-webkit-slider-runnable-track {
