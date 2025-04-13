@@ -102,14 +102,22 @@ function ruleHandler(rule) {
 }
 
 const plugin = () => {
+  const visited = new WeakSet();
+
   return {
     postcssPlugin: 'postcss-input-style',
     Rule(rule) {
+      if (visited.has(rule)) {
+        return;
+      }
+
       if (!containsPseudo(rule.selector)) {
+        visited.add(rule);
         return;
       }
 
       ruleHandler(rule);
+      visited.add(rule);
     },
   };
 };
