@@ -10,7 +10,6 @@ export default [
   prettierConfig,
   pluginPromise.configs['flat/recommended'],
   importX.flatConfigs.recommended,
-  importX.flatConfigs.typescript,
   {
     plugins: {
       prettier: prettier,
