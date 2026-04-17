@@ -2,11 +2,14 @@ import eslint from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
 import prettier from 'eslint-plugin-prettier';
 import pluginPromise from 'eslint-plugin-promise';
+import depend from 'eslint-plugin-depend';
+import { importX } from 'eslint-plugin-import-x';
 
 export default [
   eslint.configs.recommended,
   prettierConfig,
   pluginPromise.configs['flat/recommended'],
+  importX.flatConfigs.recommended,
   {
     plugins: {
       prettier: prettier,
@@ -40,6 +43,21 @@ export default [
       radix: 'error',
       strict: 'error',
       quotes: ['error', 'single'],
+      'import-x/no-dynamic-require': 'warn',
+      'import-x/no-nodejs-modules': 'warn',
+    },
+  },
+  {
+    plugins: {
+      depend,
+    },
+    rules: {
+      'depend/ban-dependencies': [
+        'error',
+        {
+          presets: ['native', 'microutilities', 'preferred'],
+        },
+      ],
     },
   },
 ];
